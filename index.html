@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="">
+    <form onsubmit="return formSubmit(event)">
         <label for="reps">Reps</label>
         <input type="number" name="reps" id="reps">
         <label for="sets">Sets</label>
         <input type="number" name="sets" id="sets">
         <button type="submit">Submit</button>
     </form>
+    <p id="reps-2tier"></p>
+    <p id="sets-2tier"></p>
+    <p id="reps-3tier"></p>
+    <p id="sets-3tier"></p>
     <script src="index.js"></script>
 </body>
 </html>
