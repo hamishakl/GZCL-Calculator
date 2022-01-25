@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GZCL Calc</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <form onsubmit="return formSubmit(event)">
-        <label for="reps">Reps</label>
-        <input type="number" min="1" max="5"name="reps" required id="reps">
-        <label for="sets">Sets</label>
-        <input type="number" min="1" max="3"name="sets" required id="sets">
-        <button type="submit">Submit</button>
+      <label for="reps">Reps</label>
+      <input type="number" min="1" max="5" name="gzcl" required id="reps" />
+      <label for="sets">Sets</label>
+      <input type="number" min="1" max="3" name="gzcl" required id="sets" />
+      <label for="sets">Weight</label>
+      <input
+        type="number"
+        min="20"
+        max="300"
+        name="gzcl"
+        required
+        id="weight"
+      />
+      <button type="submit">Submit</button>
     </form>
-    <p id="reps-2tier"></p>
-    <p id="sets-2tier"></p>
-    <p id="volume-2tier"></p>
-    <p id="reps-3tier"></p>
-    <p id="sets-3tier"></p>
-    <p id="volume-3tier"></p>
+    <table>
+      <tr>
+          <th></th>
+        <th>2nd tier</th>
+        <th>3rd tier</th>
+      </tr>
+      <tr>
+          <th>reps</th>
+        <td>
+          <p id="reps-2tier"></p>
+        </td>
+        <td>
+          <p id="reps-3tier"></p>
+        </td>
+      </tr>
+      <tr>
+          <th>sets</th>
+        <td>
+          <p id="sets-2tier"></p>
+        </td>
+        <td>
+          <p id="sets-3tier"></p>
+        </td>
+      </tr>
+      <tr>
+          <th>Weight</th>
+        <td>
+          <p id="weight-2tier"></p>
+        </td>
+        <td>
+          <p id="weight-3tier"></p>
+        </td>
+      </tr>
+    </table>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
