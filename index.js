@@ -17,10 +17,10 @@ const formSubmit = (e) => {
 
   document.getElementById(
     "weight-2tier"
-  ).innerHTML = `${calcWeight(weight)}kg`;
+  ).innerHTML = `${calcWeight(weight, reps)}kg`;
 
   document.getElementById("weight-3tier").innerHTML = `${
-    weight * 0.65
+    Math.round(((weight * 0.6)/2.5), 1)*2.5
   }kg`;
   document.getElementById("table").style.opacity = '1'
   return false;
@@ -46,14 +46,17 @@ const calcSets = (a, b, c) => {
   return total / reps;
 };
 
-const calcWeight = (a) => {
-  if (a === 1) {
-    return a * 0.7;
-  } else if (a === 2) {
-    return a * 0.75;
-  } else if (a === 3) {
-    return a * 0.8;
-  } else if (a >= 4) {
-    return a * 0.85;
+const calcWeight = (a, b) => {
+  if (b === 1) {
+    return Math.round(((a * 0.7)/2.5), 1)*2.5;
+  } else if (b === 2) {
+    return Math.round(((a * 0.725)/2.5), 1)*2.5;
+  } else if (b === 3) {
+    return Math.round(((a * 0.75)/2.5), 1)*2.5;
+  } else if (b >= 4) {
+    return Math.round(((a * 0.8)/2.5), 1)*2.5;
   }
+
 };
+
+console.log(calcWeight(122.5, 5));
