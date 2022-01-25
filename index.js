@@ -38,8 +38,12 @@ const vol = (a, b) => {
 
 const calcSets2ndMovement = (a, b, c) => {
   let total = vol(a, b) * c;
-
-  return Math.round(total / 5);
+  let d =  Math.round(total / 5);
+  if (d == 0) {
+    return 1
+  } else {
+    return d
+  }
 };
 
 const calcReps = (a, b) => {
