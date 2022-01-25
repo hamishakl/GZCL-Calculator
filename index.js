@@ -22,6 +22,7 @@ const formSubmit = (e) => {
   document.getElementById("weight-3tier").innerHTML = `${
     weight * 0.65
   }kg`;
+  document.getElementById("table").style.opacity = '1'
   return false;
 };
 
