@@ -19,75 +19,95 @@
     ></script>
   </head>
   <body>
-      <div class="wrapper">
+    <div class="wrapper">
+      <form class="row g-3" onsubmit="return formSubmit(event)">
+        <label for="reps">Reps</label>
+        <!-- <div class="input-group mb-3 col-md-6">
+          <input
+            type="number"
+            class="form-control"
+            min="1"
+            max="5"
+            name="gzcl"
+            required
+            id="reps"
+          />
+        </div> -->
+        <label for="sets">Sets</label>
+        <!-- <div class="input-group mb-3 col-sm">
+          <input
+            type="number"
+            class="form-control"
+            min="1"
+            max="3"
+            name="gzcl"
+            required
+            id="sets"
+          />
+        </div> -->
+        <label for="sets">Weight</label>
+        <div class="input-group col-sm">
+          <input
+            step=".01"
+            type="number"
+            min="20"
+            max="300"
+            name="gzcl"
+            required
+            id="weight"
+            class="form-control"
+          />
+          <span class="input-group-text">kg</span>
+        </div>
+        <label for="customRange3" class="form-label">Example range</label>
+        <p id="reps-text">1</p>
+        <input
+          type="range"
+          class="form-range"
+          min="1"
+          max="5"
+          step="1"
+          value="1"
+          id="reps-slider"
+          oninput="updateRange(this.id, this.value)"
+        />
+        <p id="sets-text">1</p>
+        <input
+          type="range"
+          class="form-range"
+          min="1"
+          max="3"
+          step="1"
+          value="1"
+          id="sets-slider"
+          oninput="updateRange(this.id, this.value)"
+        />
 
-          <form class="row g-3" onsubmit="return formSubmit(event)">
-            <label for="reps">Reps</label>
-            <div class="input-group mb-3 col-md-6">
-                <input
-                type="number"
-                class="form-control"
-                min="1"
-                max="5"
-                name="gzcl"
-                required
-                id="reps"
-                />
-            </div>
-            <label for="sets">Sets</label>
-            <div class="input-group mb-3 col-sm">
-                <input
-                type="number"
-                class="form-control"
-                min="1"
-                max="3"
-                name="gzcl"
-                required
-                id="sets"
-                />
-            </div>
-            <label for="sets">Weight</label>
-            <div class="input-group col-sm">
-                <input
-                step=".01"
-                type="number"
-                min="20"
-                max="300"
-                name="gzcl"
-                required
-                id="weight"
-                class="form-control"
-                />
-                <span class="input-group-text">kg</span>
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-        <table class="table" id="table">
-            <tr>
-                <th></th>
-                <th>2nd tier</th>
-                <th>3rd tier</th>
-            </tr>
-            <tr>
-                <th>Reps</th>
-                <td id="reps-2tier"></td>
-                <td id="reps-3tier"></td>
-            </tr>
-            <tr>
-                <th>Sets</th>
-                <td id="sets-2tier"></td>
-                <td id="sets-3tier"></td>
-            </tr>
-            <tr>
-                <th>Weight</th>
-                <td id="weight-2tier"></td>
-                <td id="weight-3tier"></td>
-            </tr>
-        </table>
-        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <table class="table" id="table">
+        <tr>
+          <th></th>
+          <th>2nd tier</th>
+          <th>3rd tier</th>
+        </tr>
+        <tr>
+          <th>Reps</th>
+          <td id="reps-2tier"></td>
+          <td id="reps-3tier"></td>
+        </tr>
+        <tr>
+          <th>Sets</th>
+          <td id="sets-2tier"></td>
+          <td id="sets-3tier"></td>
+        </tr>
+        <tr>
+          <th>Weight</th>
+          <td id="weight-2tier"></td>
+          <td id="weight-3tier"></td>
+        </tr>
+      </table>
     </div>
-        <script src="index.js"></script>
-    </body>
-    </html>
-    
+    <script src="index.js"></script>
+  </body>
+</html>

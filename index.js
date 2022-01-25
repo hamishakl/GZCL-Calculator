@@ -1,8 +1,10 @@
 const formSubmit = (e) => {
   e.preventDefault;
-  let reps = document.getElementById("reps").value;
-  let sets = document.getElementById("sets").value;
+  let reps = document.getElementById("reps-slider").value;
+  let sets = document.getElementById("sets-slider").value;
   let weight = document.getElementById("weight").value;
+
+  console.log(reps)
 
   document.getElementById("reps-2tier").innerHTML = `5`;
   document.getElementById(
@@ -47,16 +49,29 @@ const calcSets = (a, b, c) => {
 };
 
 const calcWeight = (a, b) => {
-  if (b === 1) {
+  if (b == 1) {
+    console.log(b);
     return Math.round(((a * 0.7)/2.5), 1)*2.5;
-  } else if (b === 2) {
+  } else if (b == 2) {
+    console.log(b);
     return Math.round(((a * 0.725)/2.5), 1)*2.5;
-  } else if (b === 3) {
+  } else if (b == 3) {
+    console.log(b);
     return Math.round(((a * 0.75)/2.5), 1)*2.5;
   } else if (b >= 4) {
+    console.log(b);
     return Math.round(((a * 0.8)/2.5), 1)*2.5;
   }
 
 };
 
 console.log(calcWeight(122.5, 5));
+
+const updateRange = (a, b) => {
+  if (a === 'reps-slider') {
+    document.getElementById('reps-text').innerHTML = b
+  }
+  if (a === 'sets-slider') {
+    document.getElementById('sets-text').innerHTML = b
+  }
+}
